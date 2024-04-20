@@ -4,10 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using UnityEngine.EventSystems;
 
-namespace Assets.AI_Project
-{
+
     public class Node
     {
         GiveGetState state;
@@ -36,7 +34,7 @@ namespace Assets.AI_Project
         {
             if (obj == null) return false;
             if (obj == this) return true;
-            if (obj is not Node) return false;
+            if (!(obj is Node)) return false;
 
             Node other = obj as Node;
             return this.state.Equals(other.state);
@@ -50,14 +48,18 @@ namespace Assets.AI_Project
         {
             List<Node> children = new List<Node>();
 
-            foreach (GiveGetAction dir in Enum.GetValues(typeof(GiveGetAction)))
+            foreach (GiveGetAction fruit1 in Enum.GetValues(typeof(GiveGetAction)))
             {
-                Node child = new Node(this);
-                if (child.State.ApplyOperator(dir))
-                    children.Add(child);
+                foreach (GiveGetAction fruit2 in Enum.GetValues(typeof(GiveGetAction)))
+                {
+                    Node child = new Node(this);
+                    if (child.State.ApplyOperator(fruit1, fruit2))
+                        children.Add(child);
+                }
+                
             }
 
             return children;
         }
     }
-}
+

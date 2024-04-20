@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public enum GiveGetAction
 {
-    GiveApple,
-    GivePeach,
-    GivePear
+    GiveApple = 1,
+    GivePear = 2,
+    GivePeach = 3
 }
