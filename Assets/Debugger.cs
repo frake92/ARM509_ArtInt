@@ -1,4 +1,4 @@
-﻿using Assets.AI_Project;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,12 +14,12 @@ namespace Assets
     {
         void Debug_Help()
         {
-            SolverBase solver = new GiveGetBacktrack();
+            SolverBase solver = new GiveGetBreadthFirst();
             Stack<Node> solution = solver.GetSolution(solver.Search());
 
             while (solution.Count != 0)
             {
-                Debug.Log(solution.Pop());
+                Debug.Log(solution.Pop().ToString());
             }
 
         }
