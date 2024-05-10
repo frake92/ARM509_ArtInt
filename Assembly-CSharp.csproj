@@ -61,7 +61,6 @@
     <Compile Include="Assets\AI_Project\Solver\GiveGetBacktrack.cs" />
     <Compile Include="Assets\AI_Project\StateRepresentation\GiveGetState.cs" />
     <Compile Include="Assets\AI_Project\State\IDeepCloneable.cs" />
-    <Compile Include="Assets\Scripts\Dialogue\Dialogue.cs" />
     <Compile Include="Assets\AI_Project\Solver\GiveGetBreadthFirst.cs" />
     <Compile Include="Assets\AI_Project\Solver\GiveGetDepthFirst.cs" />
     <Compile Include="Assets\AI_Project\StateRepresentation\GiveGetAction.cs" />
