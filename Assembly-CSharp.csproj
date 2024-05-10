@@ -62,10 +62,12 @@
     <Compile Include="Assets\AI_Project\StateRepresentation\GiveGetState.cs" />
     <Compile Include="Assets\AI_Project\State\IDeepCloneable.cs" />
     <Compile Include="Assets\AI_Project\Solver\GiveGetBreadthFirst.cs" />
+    <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\AI_Project\Solver\GiveGetDepthFirst.cs" />
     <Compile Include="Assets\AI_Project\StateRepresentation\GiveGetAction.cs" />
     <Compile Include="Assets\AI_Project\State\State.cs" />
     <Compile Include="Assets\AI_Project\Solver\Node.cs" />
+    <Compile Include="Assets\Scripts\SolverVisualisation.cs" />
     <Compile Include="Assets\AI_Project\Operator\IOperatorHandler.cs" />
     <Compile Include="Assets\AI_Project\Solver\SolverBase.cs" />
     <Compile Include="Assets\AI_Project\Debugger.cs" />

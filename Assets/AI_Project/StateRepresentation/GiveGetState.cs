@@ -16,7 +16,30 @@ namespace Assembly_CSharp
             this.Peaches = 59;
         }
         private int apples;
-
+        private GiveGetAction currentAction1;
+        public GiveGetAction CurrentAction1 
+        { 
+            get
+            {
+                return currentAction1;
+            }
+            set
+            {
+                currentAction1 = value;
+            }
+        }
+        private GiveGetAction currentAction2;
+        public GiveGetAction CurrentAction2
+        {
+            get
+            {
+                return currentAction2;
+            }
+            set
+            {
+                currentAction2 = value;
+            }
+        }
         public int Apples
         {
             get { return apples; }
@@ -111,13 +134,16 @@ namespace Assembly_CSharp
             else if (fruit1 == GiveGetAction.GivePeach && fruit2 == GiveGetAction.GivePear)
                 Apples = Apples + 2;
 
-
+            CurrentAction1 = fruit1;
+            CurrentAction2 = fruit2;
             if (IsState)
                 return true;
 
             this.Apples = giveGetClone.Apples;
             this.Pears = giveGetClone.Pears;
             this.Peaches = giveGetClone.Peaches;
+            this.CurrentAction1 = giveGetClone.CurrentAction1;
+            this.CurrentAction2 = giveGetClone.CurrentAction2;
             return false;
 
         }
@@ -147,10 +173,6 @@ namespace Assembly_CSharp
             if (fruit1 == fruit2)
                 return false;
 
-            int giveableQuantity = 1;
-            //if the randomized number is 1 then the random fruit is Apple,
-            //if it's 2 then Pear
-            //if it's 3 then Peaches
             switch (fruit1)
             {
                 case GiveGetAction.GiveApple:
