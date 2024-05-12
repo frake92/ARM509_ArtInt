@@ -68,6 +68,7 @@
     <Compile Include="Assets\AI_Project\State\State.cs" />
     <Compile Include="Assets\AI_Project\Solver\Node.cs" />
     <Compile Include="Assets\Scripts\SolverVisualisation.cs" />
+    <Compile Include="Assets\Scripts\FreePlay.cs" />
     <Compile Include="Assets\AI_Project\Operator\IOperatorHandler.cs" />
     <Compile Include="Assets\AI_Project\Solver\SolverBase.cs" />
     <Compile Include="Assets\AI_Project\Debugger.cs" />
